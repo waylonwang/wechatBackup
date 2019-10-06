@@ -1,0 +1,390 @@
+# Chinese (Simplified, China) translations for PROJECT.
+# Copyright (C) 2019 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2019-10-06 16:27+0800\n"
+"PO-Revision-Date: 2019-10-05 22:22+0800\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_Hans_CN\n"
+"Language-Team: zh_Hans_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+
+#: server/__init__.py:68
+msgid "Command init error"
+msgstr "命令初始化错误"
+
+#: server/__init__.py:117
+msgid "Task init error"
+msgstr "任务初始化错误"
+
+#: server/__init__.py:136
+msgid "Kill task error"
+msgstr "杀死任务错误"
+
+#: server/task.py:213
+msgid "Task has stopped"
+msgstr "任务已经停止"
+
+#: server/task.py:216
+msgid "Task stop failed"
+msgstr "任务停止失败"
+
+#: server/android/device.py:115
+msgid "ADB Insecure has been installed successfully"
+msgstr "ADB Insecure已经成功安装"
+
+#: server/android/device.py:118
+msgid "ADB Insecure installation failed"
+msgstr "ADB Insecure安装失败"
+
+#: server/android/device.py:132
+msgid ""
+"{} users have been found, please select the users that need to be "
+"processed"
+msgstr "已找到{}个用户，请选择需要处理的用户"
+
+#: server/android/device.py:136
+msgid "No valid users found"
+msgstr "未找到有效用户"
+
+#: server/android/device.py:139
+msgid "The rooted Android device has not been connected yet"
+msgstr "尚未连接已root的安卓手机"
+
+#: server/android/device.py:151
+msgid "Successfully get IMEI: {}"
+msgstr "获取IMEI成功:{}"
+
+#: server/android/device.py:153
+msgid "Failed to get IMEI"
+msgstr "获取IMEI失败"
+
+#: server/android/device.py:164
+msgid "Successfully get UIN: {}"
+msgstr "获取UIN成功:{}"
+
+#: server/android/device.py:166
+msgid "Failed to get UIN"
+msgstr "获取UIN失败"
+
+#: server/android/device.py:182
+msgid "{} was deleted"
+msgstr "{}已经删除"
+
+#: server/android/device.py:187
+msgid "Delete failed, error on operate file"
+msgstr "删除失败，操作文件错误"
+
+#: server/android/device.py:201
+msgid "Task daemon not started"
+msgstr "守护任务未启动"
+
+#: server/android/device.py:252
+msgid "Project create..."
+msgstr "项目创建..."
+
+#: server/android/device.py:254
+msgid "Failed to create project"
+msgstr "创建项目失败"
+
+#: server/android/task.py:186 server/android/task.py:537
+msgid "Pull has been stopped"
+msgstr "已停止拉取数据库"
+
+#: server/android/task.py:189 server/android/task.py:540
+msgid "Stop pull was failed"
+msgstr "停止拉取数据库失败"
+
+#: server/android/task.py:230
+msgid "Migrating"
+msgstr "迁移中"
+
+#: server/android/task.py:231
+msgid "Decrypting"
+msgstr "解密中"
+
+#: server/android/task.py:322
+msgid "Decryption completed"
+msgstr "解密完成"
+
+#: server/android/task.py:377
+msgid "Counting"
+msgstr "统计中"
+
+#: server/android/task.py:380
+msgid "Pulling {}"
+msgstr "拉取{}"
+
+#: server/android/task.py:488
+msgid "Resouce pull timeout"
+msgstr "资源拉取超时"
+
+#: server/android/task.py:499
+msgid "Resouce pull completed"
+msgstr "资源拉取完成"
+
+#: static/js/aa_backup.js:328 static/js/aa_backup.js:375
+#: static/js/aa_backup.js:625
+msgid "Encryption database"
+msgstr "已加密数据库"
+
+#: static/js/aa_backup.js:329 static/js/aa_backup.js:376
+msgid "Decryption database"
+msgstr "已解密数据库"
+
+#: static/js/aa_backup.js:330 static/js/aa_backup.js:377
+msgid "Resource"
+msgstr "资源文件"
+
+#: static/js/aa_backup.js:379
+msgid "Pull database"
+msgstr "拉取数据库"
+
+#: static/js/aa_backup.js:380
+msgid "Decrypt database"
+msgstr "解密数据库"
+
+#: static/js/aa_backup.js:381
+msgid "Pull resource"
+msgstr "拉取资源文件"
+
+#: static/js/aa_backup.js:441 static/js/aa_backup.js:614
+msgid "Pulling database"
+msgstr "正在拉取数据库"
+
+#: static/js/aa_backup.js:442 static/js/aa_backup.js:643
+msgid "Decrypting database"
+msgstr "正在解密数据库"
+
+#: static/js/aa_backup.js:443
+msgid "Pulling resource"
+msgstr "正在拉取资源文件"
+
+#: static/js/aa_backup.js:445 static/js/aa_backup.js:446
+#: static/js/aa_backup.js:447 templates/android.html:189
+msgid "Stop"
+msgstr "停止"
+
+#: static/js/aa_backup.js:625
+msgid "Error"
+msgstr "错误"
+
+#: static/js/aa_backup.js:764
+msgid "Exist projects"
+msgstr "已创建项目"
+
+#: static/js/aa_command.js:16
+msgid " → Command execution started"
+msgstr " → 命令开始执行"
+
+#: static/js/aa_command.js:54
+msgid " → Command execution completed"
+msgstr " → 命令执行完毕"
+
+#: static/js/aa_command.js:68
+msgid "Serial Number"
+msgstr "序列号"
+
+#: static/js/aa_command.js:70
+msgid "{0} is connected"
+msgstr "已连接{0}"
+
+#: static/js/aa_command.js:79
+msgid "Please check \"Enable insecure adbd\" in adbd Insecure on your device"
+msgstr "请在设备的adbd Insecure中勾选\"Enable insecure adbd\""
+
+#: static/js/aa_command.js:84
+msgid ""
+"If the device is already root, please click the button in the drop-down "
+"menu in the root status to install adbd Insecure"
+msgstr "如果设备已经root,请在root状态的下拉菜单中点击按钮来安装adbd Insecure"
+
+#: static/js/aa_command.js:95
+msgid "Please choice user..."
+msgstr "请选择用户..."
+
+#: static/js/aa_command.js:107 templates/android.html:95
+msgid "User"
+msgstr "用户"
+
+#: static/js/aa_command.js:122
+msgid "Please choice IMEI..."
+msgstr "请选择IMEI..."
+
+#: static/js/aa_device.js:3
+msgid "Manufacturer"
+msgstr "制造商"
+
+#: static/js/aa_device.js:3
+msgid "Model"
+msgstr "型号"
+
+#: static/js/aa_device.js:3
+msgid "Host Name"
+msgstr "主机名称"
+
+#: static/js/aa_device.js:87 static/js/aa_device.js:100
+msgid "Device checker"
+msgstr "设备检查器"
+
+#: static/js/aa_device.js:108 static/js/aa_device.js:121
+msgid "Root checker"
+msgstr "Root检查器"
+
+#: static/js/aa_device.js:139
+msgid "Calculated password: "
+msgstr "计算出密码: "
+
+#: static/js/aa_device.js:242 templates/android.html:20
+msgid "Server is connected"
+msgstr "已连接服务器"
+
+#: static/js/aa_device.js:253
+msgid "Server has been disconnected"
+msgstr "已断开服务器"
+
+#: static/js/aa_device.js:264 templates/android.html:35
+msgid "Device is connected"
+msgstr "已连接设备"
+
+#: static/js/aa_device.js:274
+msgid "Device has been disconnected"
+msgstr "已断开设备"
+
+#: static/js/aa_task.js:84
+msgid "Get device properties"
+msgstr "获取设备属性"
+
+#: static/js/aa_task.js:132
+msgid "Check insecure"
+msgstr "检查insecure"
+
+#: static/js/common.js:70
+msgid "The server connection has been disconnected, please reconnect"
+msgstr "与服务器的连接已断开，请重连"
+
+#: templates/android.html:11
+msgid "Android Assistant"
+msgstr "安卓助手"
+
+#: templates/android.html:15
+msgid "Connect"
+msgstr "连接"
+
+#: templates/android.html:21
+msgid "Server not connected"
+msgstr "服务器未连接"
+
+#: templates/android.html:25
+msgid "Disconnect"
+msgstr "断开"
+
+#: templates/android.html:26
+msgid "Reconnect"
+msgstr "重连"
+
+#: templates/android.html:36
+msgid "Device not connected"
+msgstr "设备未连接"
+
+#: templates/android.html:40
+msgid "No device info"
+msgstr "未有设备信息"
+
+#: templates/android.html:49
+msgid "Rooted"
+msgstr "已Root"
+
+#: templates/android.html:50
+msgid "Unroot"
+msgstr "未Root"
+
+#: templates/android.html:54
+msgid "Install adbd Insecure to device"
+msgstr "安装adbd Insecure到设备中"
+
+#: templates/android.html:72 templates/android.html:82
+#: templates/android.html:99
+msgid "Get"
+msgstr "获取"
+
+#: templates/android.html:89
+msgid "Password"
+msgstr "密码"
+
+#: templates/android.html:107
+msgid "Create backup"
+msgstr "创建备份"
+
+#: templates/base.html:7
+msgid "Wechat Backup Application"
+msgstr "微信备份"
+
+#: templates/base.html:21
+msgid "Home"
+msgstr "首页"
+
+#: templates/base.html:22
+msgid "Android"
+msgstr "安卓"
+
+#: templates/base.html:23 templates/history.html:4
+msgid "History"
+msgstr "历史"
+
+#: templates/index.html:4
+msgid "Wechat Backup"
+msgstr "微信备份"
+
+#: templates/index.html:5
+msgid "1.Choose the type of device used for backup"
+msgstr "一、选择备份使用的设备类型"
+
+#: templates/index.html:6
+msgid "2.Get device information and calculate the password"
+msgstr "二、获取设备信息并计算获得密码"
+
+#: templates/index.html:7
+msgid "3.Get a list of users and select the user that need to back up data"
+msgstr "三、获取用户列表并选择需要备份数据的用户"
+
+#: templates/index.html:8
+msgid "4.Create a backup project"
+msgstr "四、创建备份项目"
+
+#: templates/index.html:9
+msgid "5.Pull the database"
+msgstr "五、拉取数据库"
+
+#: templates/index.html:10
+msgid "6.Decrypt database"
+msgstr "六、解密数据库"
+
+#: templates/index.html:11
+msgid "7.Pull resource files"
+msgstr "七、拉取资源文件"
+
+#~ msgid "Successfully get IMEI: {}"
+#~ msgstr "获取IMEI成功"
+
+#~ msgid "Successfully get UIN: {}"
+#~ msgstr "获取UIN成功"
+
+#~ msgid "Pull has been stopped"
+#~ msgstr "已停止拉取数据库"
+
+#~ msgid "The server connection has been disconnected, please reconnect"
+#~ msgstr "与服务器的连接已断开，请重连"
+
+#~ msgid " is connected"
+#~ msgstr "已连接"
+

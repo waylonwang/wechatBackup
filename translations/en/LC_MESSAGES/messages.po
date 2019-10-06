@@ -1,0 +1,402 @@
+# English translations for PROJECT.
+# Copyright (C) 2019 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2019-10-06 16:27+0800\n"
+"PO-Revision-Date: 2019-08-30 01:01+0800\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+
+#: server/__init__.py:68
+msgid "Command init error"
+msgstr ""
+
+#: server/__init__.py:117
+msgid "Task init error"
+msgstr ""
+
+#: server/__init__.py:136
+msgid "Kill task error"
+msgstr ""
+
+#: server/task.py:213
+msgid "Task has stopped"
+msgstr ""
+
+#: server/task.py:216
+msgid "Task stop failed"
+msgstr ""
+
+#: server/android/device.py:115
+msgid "ADB Insecure has been installed successfully"
+msgstr ""
+
+#: server/android/device.py:118
+msgid "ADB Insecure installation failed"
+msgstr ""
+
+#: server/android/device.py:132
+msgid ""
+"{} users have been found, please select the users that need to be "
+"processed"
+msgstr ""
+
+#: server/android/device.py:136
+msgid "No valid users found"
+msgstr ""
+
+#: server/android/device.py:139
+msgid "The rooted Android device has not been connected yet"
+msgstr ""
+
+#: server/android/device.py:151
+msgid "Successfully get IMEI: {}"
+msgstr ""
+
+#: server/android/device.py:153
+msgid "Failed to get IMEI"
+msgstr ""
+
+#: server/android/device.py:164
+msgid "Successfully get UIN: {}"
+msgstr ""
+
+#: server/android/device.py:166
+msgid "Failed to get UIN"
+msgstr ""
+
+#: server/android/device.py:182
+msgid "{} was deleted"
+msgstr ""
+
+#: server/android/device.py:187
+msgid "Delete failed, error on operate file"
+msgstr ""
+
+#: server/android/device.py:201
+msgid "Task daemon not started"
+msgstr ""
+
+#: server/android/device.py:252
+msgid "Project create..."
+msgstr ""
+
+#: server/android/device.py:254
+msgid "Failed to create project"
+msgstr ""
+
+#: server/android/task.py:186 server/android/task.py:537
+msgid "Pull has been stopped"
+msgstr ""
+
+#: server/android/task.py:189 server/android/task.py:540
+msgid "Stop pull was failed"
+msgstr ""
+
+#: server/android/task.py:230
+msgid "Migrating"
+msgstr ""
+
+#: server/android/task.py:231
+msgid "Decrypting"
+msgstr ""
+
+#: server/android/task.py:322
+msgid "Decryption completed"
+msgstr ""
+
+#: server/android/task.py:377
+msgid "Counting"
+msgstr ""
+
+#: server/android/task.py:380
+msgid "Pulling {}"
+msgstr ""
+
+#: server/android/task.py:488
+msgid "Resouce pull timeout"
+msgstr ""
+
+#: server/android/task.py:499
+msgid "Resouce pull completed"
+msgstr ""
+
+#: static/js/aa_backup.js:328 static/js/aa_backup.js:375
+#: static/js/aa_backup.js:625
+msgid "Encryption database"
+msgstr ""
+
+#: static/js/aa_backup.js:329 static/js/aa_backup.js:376
+msgid "Decryption database"
+msgstr ""
+
+#: static/js/aa_backup.js:330 static/js/aa_backup.js:377
+msgid "Resource"
+msgstr ""
+
+#: static/js/aa_backup.js:379
+msgid "Pull database"
+msgstr ""
+
+#: static/js/aa_backup.js:380
+msgid "Decrypt database"
+msgstr ""
+
+#: static/js/aa_backup.js:381
+msgid "Pull resource"
+msgstr ""
+
+#: static/js/aa_backup.js:441 static/js/aa_backup.js:614
+msgid "Pulling database"
+msgstr ""
+
+#: static/js/aa_backup.js:442 static/js/aa_backup.js:643
+msgid "Decrypting database"
+msgstr ""
+
+#: static/js/aa_backup.js:443
+msgid "Pulling resource"
+msgstr ""
+
+#: static/js/aa_backup.js:445 static/js/aa_backup.js:446
+#: static/js/aa_backup.js:447 templates/android.html:189
+msgid "Stop"
+msgstr ""
+
+#: static/js/aa_backup.js:625
+msgid "Error"
+msgstr ""
+
+#: static/js/aa_backup.js:764
+msgid "Exist projects"
+msgstr ""
+
+#: static/js/aa_command.js:16
+msgid " → Command execution started"
+msgstr ""
+
+#: static/js/aa_command.js:54
+msgid " → Command execution completed"
+msgstr ""
+
+#: static/js/aa_command.js:68
+msgid "Serial Number"
+msgstr ""
+
+#: static/js/aa_command.js:70
+msgid "{0} is connected"
+msgstr ""
+
+#: static/js/aa_command.js:79
+msgid "Please check \"Enable insecure adbd\" in adbd Insecure on your device"
+msgstr ""
+
+#: static/js/aa_command.js:84
+msgid ""
+"If the device is already root, please click the button in the drop-down "
+"menu in the root status to install adbd Insecure"
+msgstr ""
+
+#: static/js/aa_command.js:95
+msgid "Please choice user..."
+msgstr ""
+
+#: static/js/aa_command.js:107 templates/android.html:95
+msgid "User"
+msgstr ""
+
+#: static/js/aa_command.js:122
+msgid "Please choice IMEI..."
+msgstr ""
+
+#: static/js/aa_device.js:3
+msgid "Manufacturer"
+msgstr ""
+
+#: static/js/aa_device.js:3
+msgid "Model"
+msgstr ""
+
+#: static/js/aa_device.js:3
+msgid "Host Name"
+msgstr ""
+
+#: static/js/aa_device.js:87 static/js/aa_device.js:100
+msgid "Device checker"
+msgstr ""
+
+#: static/js/aa_device.js:108 static/js/aa_device.js:121
+msgid "Root checker"
+msgstr ""
+
+#: static/js/aa_device.js:139
+msgid "Calculated password: "
+msgstr ""
+
+#: static/js/aa_device.js:242 templates/android.html:20
+msgid "Server is connected"
+msgstr ""
+
+#: static/js/aa_device.js:253
+msgid "Server has been disconnected"
+msgstr ""
+
+#: static/js/aa_device.js:264 templates/android.html:35
+msgid "Device is connected"
+msgstr ""
+
+#: static/js/aa_device.js:274
+msgid "Device has been disconnected"
+msgstr ""
+
+#: static/js/aa_task.js:84
+msgid "Get device properties"
+msgstr ""
+
+#: static/js/aa_task.js:132
+msgid "Check insecure"
+msgstr ""
+
+#: static/js/common.js:70
+msgid "The server connection has been disconnected, please reconnect"
+msgstr ""
+
+#: templates/android.html:11
+msgid "Android Assistant"
+msgstr ""
+
+#: templates/android.html:15
+msgid "Connect"
+msgstr ""
+
+#: templates/android.html:21
+msgid "Server not connected"
+msgstr ""
+
+#: templates/android.html:25
+msgid "Disconnect"
+msgstr ""
+
+#: templates/android.html:26
+msgid "Reconnect"
+msgstr ""
+
+#: templates/android.html:36
+msgid "Device not connected"
+msgstr ""
+
+#: templates/android.html:40
+msgid "No device info"
+msgstr ""
+
+#: templates/android.html:49
+msgid "Rooted"
+msgstr ""
+
+#: templates/android.html:50
+msgid "Unroot"
+msgstr ""
+
+#: templates/android.html:54
+msgid "Install adbd Insecure to device"
+msgstr ""
+
+#: templates/android.html:72 templates/android.html:82
+#: templates/android.html:99
+msgid "Get"
+msgstr ""
+
+#: templates/android.html:89
+msgid "Password"
+msgstr ""
+
+#: templates/android.html:107
+msgid "Create backup"
+msgstr ""
+
+#: templates/base.html:7
+msgid "Wechat Backup Application"
+msgstr ""
+
+#: templates/base.html:21
+msgid "Home"
+msgstr ""
+
+#: templates/base.html:22
+msgid "Android"
+msgstr ""
+
+#: templates/base.html:23 templates/history.html:4
+msgid "History"
+msgstr ""
+
+#: templates/index.html:4
+msgid "Wechat Backup"
+msgstr ""
+
+#: templates/index.html:5
+msgid "1.Choose the type of device used for backup"
+msgstr ""
+
+#: templates/index.html:6
+msgid "2.Get device information and calculate the password"
+msgstr ""
+
+#: templates/index.html:7
+msgid "3.Get a list of users and select the user that need to back up data"
+msgstr ""
+
+#: templates/index.html:8
+msgid "4.Create a backup project"
+msgstr ""
+
+#: templates/index.html:9
+msgid "5.Pull the database"
+msgstr ""
+
+#: templates/index.html:10
+msgid "6.Decrypt database"
+msgstr ""
+
+#: templates/index.html:11
+msgid "7.Pull resource files"
+msgstr ""
+
+#~ msgid "Successfully get IMEI: {}"
+#~ msgstr ""
+
+#~ msgid "Successfully get UIN: {}"
+#~ msgstr ""
+
+#~ msgid "Pull has been stopped"
+#~ msgstr ""
+
+#~ msgid "The server connection has been disconnected, please reconnect"
+#~ msgstr ""
+
+#~ msgid "Successfully obtained IMEI: {}"
+#~ msgstr ""
+
+#~ msgid "Successfully obtained UIN: {}"
+#~ msgstr ""
+
+#~ msgid "The communication connection has been disconnected, please reconnect"
+#~ msgstr ""
+
+#~ msgid "Pull has been is_stopped"
+#~ msgstr ""
+
+#~ msgid " is connected"
+#~ msgstr ""
+

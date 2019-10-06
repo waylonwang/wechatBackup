@@ -1,0 +1,244 @@
+{% extends 'base.html' %}{% from 'bootstrap/utils.html' import render_static %}
+
+{% block content %}
+    <!-- css begin -->
+    {{ render_static('css', 'vendor/font-awesome/5.8.2/css/all.min.css') }}
+    {{ render_static('css', 'vendor/select2/3.5.2/select2.css') }}
+    {{ render_static('css', 'vendor/select2-bootstrap-css/1.4.6/select2-bootstrap.min.css') }}
+    {{ render_static('css', 'css/android.css') }}
+    <!-- css end -->
+    <link rel="gettext" type="application/json" href="{{ url_for('static', filename='translations/' + locale + '.json') }}">
+    <h1>{{ _("Android Assistant") }}</h1>
+    <!-- device status begin -->
+    <div class="container">
+        <div class="row controller-contents-status text-muted small mt-2">
+            <button class="btn btn-primary" id="btn_connect" style="display: none;">{{ _("Connect") }}</button>
+            <!-- server status begin -->
+            <div class="dropdown">
+                <div class="status-control btn-group" id="status_server" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="status-icon status-icon-off rounded-circle align-middle"></span>
+                    <span class="status-label status-label-on align-middle" style="display: none">{{ _("Server is connected") }}</span>
+                    <span class="status-label status-label-off align-middle">{{ _("Server not connected") }}</span>
+                </div>
+                <!-- server connect buttons panel begin -->
+                <div class="dropdown-menu">
+                    <button class="btn-sm btn-danger" id="btn_disconnect">{{ _("Disconnect") }}</button>
+                    <button class="btn-sm btn-success" id="btn_reconnect">{{ _("Reconnect") }}</button>
+                </div>
+                <!-- server connect buttons panel end -->
+            </div>
+            <!-- server status end -->
+            <!-- device status begin -->
+            <div class="dropdown">
+                <div class="status-control" id="status_device">
+                    <span class="status-icon status-icon-off rounded-circle align-middle"></span>
+                    <span class="status-label status-label-on align-middle" style="display: none">{{ _("Device is connected") }}</span>
+                    <span class="status-label status-label-off align-middle">{{ _("Device not connected") }}</span>
+                </div>
+                <!-- device info panel begin -->
+                <ul class="dropdown-menu">
+                    <li class="dropdown-header d-flex text-left">{{ _("No device info") }}</li>
+                </ul>
+                <!-- device info panel end -->
+            </div>
+            <!-- device status end -->
+            <!-- root status begin -->
+            <div class="dropdown">
+                <div class="status-control" id="status_root" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="status-icon status-icon-off rounded-circle align-middle"></span>
+                    <span class="status-label status-label-on align-middle" style="display: none">{{ _("Rooted") }}</span>
+                    <span class="status-label status-label-off align-middle" style="display: none">{{ _("Unroot") }}</span>
+                </div>
+                <!-- install insecure panel begin -->
+                <div class="dropdown-menu">
+                    <button class="btn btn-light btn-controller" id="btn_install_insecure" data-command="install_insecure">{{ _("Install adbd Insecure to device") }}</button>
+                </div>
+                <!-- install insecure panel end -->
+            </div>
+            <!-- root end -->{#            <!-- pull db begin -->#}
+        </div>
+    </div>
+    <!-- device status end -->
+    <!-- device info begin -->
+    <div class="container mt-3 mb-3 pr-0">
+        <div class="row">
+            <!-- IMEI info begin -->
+            <div class="col-xs-12 col-md-4 col-lg-3 pl-0">
+                <div class="input-group">
+                    <select class="form-control" id="imei" data-placeholder="IMEI" style="font-size:80%!important;">
+                        <option></option>
+                    </select>
+                    <div class="input-group-append">
+                        <button class="btn btn-sm btn-outline-secondary btn-controller" id="btn_imei" data-command="get_imei" disabled>{{ _("Get") }}</button>
+                    </div>
+                </div>
+            </div>
+            <!-- IMEI info end -->
+            <!-- UIN info begin -->
+            <div class="col-xs-12 col-md-4 col-lg-2 pl-0">
+                <div class="input-group">
+                    <input class="form-control" type="text" id="uin" placeholder="UIN" style="font-size:80%!important;">
+                    <div class="input-group-append">
+                        <button class="btn btn-sm btn-outline-secondary btn-controller" id="btn_uin" data-command="get_uin" disabled>{{ _("Get") }}</button>
+                    </div>
+                </div>
+            </div>
+            <!-- UIN info end -->
+            <!-- password info begin -->
+            <div class="col-xs-12 col-md-4 col-lg-1 pl-0 pr-0">
+                <input class="form-control" type="text" id="password" placeholder="{{ _("Password") }}" readonly="readonly" style="font-size:80%!important;">
+            </div>
+            <!-- password info end -->
+            <!-- users info begin -->
+            <div class="col-xs-12 col-md-12 col-lg-4 pr-0">
+                <div class="input-group">
+                    <select class="form-control" id="user" data-placeholder="{{ _("User") }}" style="font-size:80%!important;">
+                        <option></option>
+                    </select>
+                    <div class="input-group-append">
+                        <button class="btn btn-sm btn-outline-secondary btn-controller" id="btn_user" data-command="get_users" disabled>{{ _("Get") }}</button>
+                    </div>
+                </div>
+            </div>
+            <!-- users info end -->
+            <!-- create project button begin -->
+            <div class="col-xs-12 col-md-12 col-lg-2 text-right">
+                <button class="btn btn-primary" id="btn_project" data-task="create_project" style="height: 34px;line-height: 1.42857;" disabled>
+                    <i class="fa fw fa-plus"></i> {{ _("Create backup") }}
+                </button>
+            </div>
+            <!-- create project button end -->
+        </div>
+    </div>
+    <!-- device info end -->
+    <!-- contents begin -->
+    <div class="controller-contents-master small d-inline-flex w-fill">
+        <!-- output begin -->
+        <div class="output-frame w-fill">
+            <div class="output small">
+                <ul></ul>
+            </div>
+        </div>
+        <!-- output end -->
+        <!-- project begin -->
+        <div class="list-frame text-muted mr-0" style="width:0px">
+            <!-- list begin -->
+            <div class="item-row project" id="template_project" data-db-status="waiting" data-res-status="waiting" style="display: none!important;">
+                <!-- project name begin -->
+                <div class="row project-info">
+                    <div class="col-4 project-name">
+                        <i class="far fw fa-clock"></i>
+                        <span class="status-label"></span>
+                    </div>
+                    <div class="col-3 text-right project-password">
+                        <i class="fas fw fa-key"></i>
+                        <span class="status-label"></span>
+                    </div>
+                    <div class="col-5 text-right project-user">
+                        <i class="fas fw fa-user"></i>
+                        <span class="status-label"></span>
+                    </div>
+                </div>
+                <!-- project name end -->
+                <!-- project files begin -->
+                <div class="row">
+                    <div class="container project-files mr-0 pr-0"></div>
+                </div>
+                <!-- project files end -->
+            </div>
+            <div class="row item-row item-done ml-2" id="template_done" style="display: none!important;">
+                <!-- file name begin -->
+                <div class="col-5 item-name">
+                    <span class="fa-stack" style="vertical-align: top;width: 1rem;">
+                        <i class="fa fw fa-database fa-stack-1x" style="display: none"></i>
+                        <i class="fa fw fa-images fa-stack-1x" style="display: none"></i>
+                        <i class="fa fw fa-lock fa-stack-1x" style="display: none"></i>
+                        <i class="fa fw fa-lock-open fa-stack-1x" style="display: none"></i>
+                        <i class="fa fw fa-unlock fa-stack-1x" style="display: none"></i>
+                    </span>
+                    <span class="status-label"></span>
+                </div>
+                <!-- file name end -->
+                <!-- file size begin -->
+                <div class="col-5 item-size text-right" id="status_db_file_size" style="line-height: 2rem;">
+                    <span class="status-label"></span>
+                </div>
+                <!-- file size end -->
+                <!-- file control buttons begin -->
+                <div class="col-2 text-right">
+                    <button class="btn btn-controller btn-icon fa fw fa-trash text-muted" id="btn_delete" data-toggle="tooltip" data-placement="left" title="Delete this file"></button>
+                </div>
+                <!-- file control buttons end -->
+            </div>
+            <div class="row item-row item-doing ml-2 text-info" id="template_doing" style="display: none!important;">
+                <!-- file name begin -->
+                <div class="col-5 item-name">
+                    <i class="fas fw fa-spinner fa-spin"></i>
+                    <span class="status-label"></span>
+                </div>
+                <!-- file name end -->
+                <!-- file size begin -->
+                <div class="col-5 item-size text-right" id="status_db_file_size" style="line-height: 2rem;">
+                    <span class="status-label"></span>
+                </div>
+                <!-- file size end -->
+                <!-- button begin -->
+                <div class="col-2 pl-0 text-right">
+                    <button class="btn btn-sm btn-outline-info btn-controller" id="btn_stop" data-task="decrypt">
+                        <i class="fa fw fa-stop-circle"></i>
+                        <span class="status-label">{{ _("Stop") }}</span>
+                    </button>
+                </div>
+                <!-- button end -->
+            </div>
+            <div class="row item-row item-queue ml-2" id="template_queue" style="display: none!important;">
+                <!-- file name begin -->
+                <div class="col-6 item-name">
+                    <span class="fa-stack" style="vertical-align: top;width: 1rem;">
+                        <i class="fa fw fa-database fa-stack-1x" style="display: none"></i>
+                        <i class="fa fw fa-images fa-stack-1x" style="display: none"></i>
+                        <i class="fa fw fa-lock fa-stack-1x" style="display: none"></i>
+                        <i class="fa fw fa-unlock fa-stack-1x" style="display: none"></i>
+                    </span>
+                    <span class="status-label"></span>
+                </div>
+                <!-- file name end -->
+                <!-- button begin -->
+                <div class="col-6 item-action controller-buttons-auto text-right" style="display: none">
+                    <button class="btn btn-sm btn-outline-primary btn-controller" id="btn_action" data-task="decrypt">
+                        <i class="fa fw fa-download" style="display: none"></i>
+                        <i class="fa fw fa-lock-open" style="display: none"></i>
+                        <span class="status-label"></span>
+                    </button>
+                </div>
+                <!-- button end -->
+            </div>
+            <div class="container project-browser mr-0"></div>
+        </div>
+        <!-- project begin -->
+    </div>
+    <!-- contents end -->
+    <!-- foot begin -->
+    <div class="row controller-foot">
+        <div class="col-12 fsm-control text-right" id="fsm_state"></div>
+    </div>
+    <!-- foot end -->
+{% endblock %}
+
+{% block foot %}
+    <!-- js begin -->
+    {{ render_static('js', 'vendor/Gettext/Gettext.js') }}
+    {{ render_static('js', 'vendor/javascript-state-machine/3.0.1/state-machine.min.js') }}
+    {{ render_static('js', 'vendor/socket.io/1.7.4/socket.io.min.js') }}
+    {{ render_static('js', 'vendor/select2/3.5.2/select2.min.js') }}
+    {{ render_static('js', 'vendor/crypto-js/3.1.9-1/crypto-js.min.js') }}
+    {{ render_static('js', 'js/util.js') }}
+    {{ render_static('js', 'js/common.js') }}
+    {{ render_static('js', 'js/aa_common.js') }}
+    {{ render_static('js', 'js/aa_command.js') }}
+    {{ render_static('js', 'js/aa_task.js') }}
+    {{ render_static('js', 'js/aa_device.js') }}
+    {{ render_static('js', 'js/aa_backup.js') }}
+    <!-- js end -->
+{% endblock %}
+

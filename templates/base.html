@@ -1,0 +1,39 @@
+{% from 'bootstrap/nav.html' import render_nav_item %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>{{  _("Wechat Backup Application") }}</title>
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    {{ bootstrap.load_css() }}
+{#    <script src="https://kit.fontawesome.com/ae43d751ae.js"></script>#}
+</head>
+<body>
+<main class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                {{ render_nav_item('index', _('Home'), use_li=True) }}
+                {{ render_nav_item('android', _('Android'), use_li=True) }}
+                {{ render_nav_item('history', _('History'), use_li=True) }}
+            </ul>
+        </div>
+    </nav>
+    {% block content %}{% endblock %}
+    <footer class="text-center">
+        {% block footer %}
+            <small> &copy; 2019 <a href="https://github.com/waylonwang" title="Written by Waylon Wang">Waylon Wang</a>
+            </small>
+        {% endblock %}
+    </footer>
+</main>
+
+{{ bootstrap.load_js() }}
+{% block foot %}{% endblock %}
+</body>
+</html>
