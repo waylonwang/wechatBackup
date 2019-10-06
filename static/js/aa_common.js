@@ -1,5 +1,5 @@
 // 全局常量及变量定义
-const SHOW_FOOT_INFO = true;
+const SHOW_FOOT_INFO = false;
 
 /**
  * 清除项目浏览区的内容

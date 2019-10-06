@@ -130,9 +130,9 @@ input::placeholder {
 
 .list-frame, .output-frame {
     overflow-y: scroll;
-    height: 200px;
-    min-height: 200px;
-    max-height: 200px;
+    height: 400px;
+    min-height: 400px;
+    max-height: 400px;
 }
 
 .project-browser {
